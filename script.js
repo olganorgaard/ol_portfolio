@@ -1,0 +1,310 @@
+/* ---- particles.js config ---- */
+
+if (window.particlesJS && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+particlesJS("particles-js", {
+    "particles": {
+      "number": {
+        "value": window.innerWidth < 761 ? 55 : 140,
+        "density": {
+          "enable": true,
+          "value_area": 800
+        }
+      },
+      "color": {
+        "value": "#49698a"
+      },
+      "shape": {
+        "type": "triangle",
+        "stroke": {
+          "width": 0,
+          "color": "#ffffff"
+        },
+        "polygon": {
+          "nb_sides": 5
+        },
+        "image": {
+          "src": "img/github.svg",
+          "width": 100,
+          "height": 100
+        }
+      },
+      "opacity": {
+        "value": 0.5,
+        "random": false,
+        "anim": {
+          "enable": false,
+          "speed": 0.5,
+          "opacity_min": 0.1,
+          "sync": false
+        }
+      },
+      "size": {
+        "value": 3,
+        "random": true,
+        "anim": {
+          "enable": false,
+          "speed": 70,
+          "size_min": 0.1,
+          "sync": false
+        }
+      },
+      "line_linked": {
+        "enable": true,
+        "distance": 150,
+        "color": "#49698a",
+        "opacity": 0.3,
+        "width": 1
+      },
+      "move": {
+        "enable": true,
+        "speed": 6,
+        "direction": "none",
+        "random": false,
+        "straight": false,
+        "out_mode": "out",
+        "bounce": false,
+        "attract": {
+          "enable": false,
+          "rotateX": 600,
+          "rotateY": 1200
+        }
+      }
+    },
+    "interactivity": {
+      "detect_on": "canvas",
+      "events": {
+        "onhover": {
+          "enable": true,
+          "mode": "grab"
+        },
+        "onclick": {
+          "enable": true,
+          "mode": "push"
+        },
+        "resize": true
+      },
+      "modes": {
+        "grab": {
+          "distance": 140,
+          "line_linked": {
+            "opacity": 1
+          }
+        },
+        "bubble": {
+          "distance": 600,
+          "size": 40,
+          "duration": 2,
+          "opacity": 8,
+          "speed": 3
+        },
+        "repulse": {
+          "distance": 200,
+          "duration": 0.4
+        },
+        "push": {
+          "particles_nb": 4
+        },
+        "remove": {
+          "particles_nb": 2
+        }
+      }
+    },
+    "retina_detect": true
+  });
+}
+
+/*Animation heading*/
+if (
+  window.gsap &&
+  window.matchMedia('(min-width: 761px)').matches &&
+  !window.matchMedia('(prefers-reduced-motion: reduce)').matches
+) {
+gsap.from('.heading__line-1', { x:-100, duration: 2, opacity: 0, delay: .7})
+gsap.from('.heading__line-2', { x:100, duration: 2, opacity: 0, delay: .7})
+
+gsap.from('.profile', {
+  scrollTrigger: '.profile', 
+  x:-100, duration: 2, opacity: 0, delay: .7});
+gsap.from('.skills', {
+  scrollTrigger: '.profile', 
+  x:100, duration: 2, opacity: 0, delay: .7});
+gsap.from('.about__heading', {
+  scrollTrigger: '.profile', 
+  y:-100, duration: 2, opacity: 0, delay: 0.7});
+
+/*Project header*/
+gsap.from('.projects__heading', {
+  scrollTrigger: '.projects__heading', 
+  y:-100, duration: 2, opacity: 0, delay: 0.7});
+
+/*Projects*/
+gsap.from('.restaurant', {
+  scrollTrigger: '.restaurant', 
+  x:100, duration: 2, opacity: 0, delay: 0.9});
+  
+gsap.from('.restaurant-title', {
+  scrollTrigger: '.restaurant-title', 
+  x:-100, duration: 2, opacity: 0, delay: 1});
+gsap.from('.restaurant-desc', {
+  scrollTrigger: '.restaurant-desc', 
+  x:-100, duration: 2, opacity: 0, delay: 1.2});
+gsap.from('.restaurant-btn', {
+  scrollTrigger: '.restaurant-btn', 
+  x:-100, duration: 2, opacity: 0, delay: 1.4});
+//
+gsap.from('.workout', {
+  scrollTrigger: '.workout', 
+  x:100, duration: 2, opacity: 0, delay: 0.9});
+  
+gsap.from('.workout-title', {
+  scrollTrigger: '.workout-title', 
+  x:-100, duration: 2, opacity: 0, delay: 1});
+gsap.from('.workout-desc', {
+  scrollTrigger: '.workout-desc', 
+  x:-100, duration: 2, opacity: 0, delay: 1.2});
+gsap.from('.workout-btn', {
+  scrollTrigger: '.workout-btn', 
+  x:-100, duration: 2, opacity: 0, delay: 1.4}); 
+//
+gsap.from('.trip', {
+  scrollTrigger: '.trip', 
+  x:100, duration: 2, opacity: 0, delay: 0.9});
+  
+gsap.from('.trip-title', {
+  scrollTrigger: '.trip-title', 
+  x:-100, duration: 2, opacity: 0, delay: 1});
+gsap.from('.trip-desc', {
+  scrollTrigger: '.trip-desc', 
+  x:-100, duration: 2, opacity: 0, delay: 1.2});
+gsap.from('.trip-btn', {
+  scrollTrigger: '.trip-btn', 
+  x:-100, duration: 2, opacity: 0, delay: 1.4});
+//
+gsap.from('.jewerly', {
+  scrollTrigger: '.jewerly-btn', 
+  x:-100, duration: 2, opacity: 0, delay: 0.9});
+  
+gsap.from('.jewerly-title', {
+  scrollTrigger: '.jewerly-title', 
+  x:100, duration: 2, opacity: 0, delay: 1});
+gsap.from('.jewerly-desc', {
+  scrollTrigger: '.jewerly-desc', 
+  x:100, duration: 2, opacity: 0, delay: 1.2});
+gsap.from('.jewerly-btn', {
+  scrollTrigger: '.jewerly-btn', 
+  x:100, duration: 2, opacity: 0, delay: 1.4});
+
+gsap.from('.nutrition-title', {
+  scrollTrigger: '.nutrition-title', 
+  x:100, duration: 2, opacity: 0, delay: 1});
+gsap.from('.nutrition-desc', {
+  scrollTrigger: '.nutrition-desc', 
+  x:100, duration: 2, opacity: 0, delay: 1.2});
+gsap.from('.nutrition-btn', {
+  scrollTrigger: '.nutrition-btn', 
+  x:100, duration: 2, opacity: 0, delay: 1.4});
+
+gsap.from('.nutrition', {
+  scrollTrigger: '.nutrition',
+  x:-100, duration: 2, opacity: 0, delay: 0.9});
+
+gsap.from('.habit', {
+  scrollTrigger: '.habit',
+  x:100, duration: 2, opacity: 0, delay: 0.9});
+//
+gsap.from('.habit-title', {
+  scrollTrigger: '.habit-title', 
+  x:-100, duration: 2, opacity: 0, delay: 1});
+gsap.from('.habit-desc', {
+  scrollTrigger: '.habit-desc', 
+  x:-100, duration: 2, opacity: 0, delay: 1.2});
+gsap.from('.habit-btn', {
+  scrollTrigger: '.habit-btn', 
+  x:-100, duration: 2, opacity: 0, delay: 1.4}); 
+//
+/*Contact header*/
+gsap.from('.contact__heading', {
+  scrollTrigger: '.contact__heading', 
+  y:-100, duration: 2, opacity: 0, delay: 0.7});
+/*Contact fields*/
+gsap.from('#contact-image', {
+  scrollTrigger: '#contact-image', 
+  x:-100, duration: 2, opacity: 0, delay: 0.7});
+gsap.from('#contact-form', {
+  scrollTrigger: '#contact-form', 
+  x:100, duration: 2, opacity: 0, delay: 0.7});
+}
+
+const navigationToggle = document.querySelector('.navigation__toggle');
+const navigationMenu = document.querySelector('.navigation');
+const navigationBar = document.querySelector('.navigation-bar');
+
+const updateNavigationBackground = () => {
+  navigationBar?.classList.toggle('is-scrolled', window.scrollY > 24);
+};
+
+updateNavigationBackground();
+window.addEventListener('scroll', updateNavigationBackground, { passive: true });
+
+if (navigationToggle && navigationMenu) {
+  const closeNavigation = () => {
+    navigationToggle.classList.remove('is-open');
+    navigationMenu.classList.remove('is-open');
+    navigationBar?.classList.remove('is-open');
+    navigationToggle.setAttribute('aria-expanded', 'false');
+    navigationToggle.setAttribute('aria-label', 'Open navigation');
+  };
+
+  navigationToggle.addEventListener('click', () => {
+    const isOpen = navigationMenu.classList.toggle('is-open');
+    navigationToggle.classList.toggle('is-open', isOpen);
+    navigationBar?.classList.toggle('is-open', isOpen);
+    navigationToggle.setAttribute('aria-expanded', String(isOpen));
+    navigationToggle.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
+  });
+
+  navigationMenu.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', closeNavigation);
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') closeNavigation();
+  });
+}
+
+const contactForm = document.getElementById('contact-form');
+const formStatus = document.getElementById('form-status');
+const formSubmit = document.getElementById('form-submit');
+
+if (contactForm && formStatus && formSubmit) {
+  contactForm.addEventListener('submit', async (event) => {
+    event.preventDefault();
+
+    if (!contactForm.reportValidity()) return;
+
+    formStatus.className = 'form-status';
+    formStatus.textContent = 'Sending your message…';
+    formSubmit.disabled = true;
+    formSubmit.textContent = 'Sending…';
+
+    try {
+      const response = await fetch(contactForm.action, {
+        method: 'POST',
+        body: new FormData(contactForm),
+        headers: { Accept: 'application/json' },
+      });
+
+      if (!response.ok) throw new Error('Message could not be sent');
+
+      contactForm.reset();
+      formStatus.classList.add('is-success');
+      formStatus.textContent = 'Thank you! Your message was sent successfully.';
+    } catch (error) {
+      formStatus.classList.add('is-error');
+      formStatus.textContent = 'Sorry, the message could not be sent. Please try again or use the email link below.';
+    } finally {
+      formSubmit.disabled = false;
+      formSubmit.textContent = 'Submit';
+    }
+  });
+}

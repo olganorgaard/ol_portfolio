@@ -1173,11 +1173,10 @@ textarea:focus-visible {
 
 .skills__item:not(:last-child) { margin-bottom: 0; }
 
-.project--habit { order: 1; }
-.project--nutrition { order: 2; }
-.project--restaurant { order: 3; }
-.project--jewelry { order: 4; }
-.project--trip { order: 5; }
+.project--nutrition { order: 1; }
+.project--restaurant { order: 2; }
+.project--jewelry { order: 3; }
+.project--trip { order: 4; }
 
 .project__impact {
 	margin-top: 1.5rem;

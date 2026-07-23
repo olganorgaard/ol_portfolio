@@ -1094,7 +1094,7 @@ textarea:focus-visible {
 		margin-bottom: 8rem;
 	}
 
-	.project-left .project__info {
+	.project .project__info {
 		order: -1;
 	}
 
